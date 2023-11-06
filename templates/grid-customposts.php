@@ -1,6 +1,6 @@
 <?php
-/* Template Name: Hoomans Page */
-get_header('hoomans');
+/* Template Name: Grid Custom Posts */
+get_header();
 
 get_template_part( 'template-parts/menu', '1' );
 ?>
@@ -12,7 +12,7 @@ get_template_part( 'template-parts/menu', '1' );
             
             // Custom query arguments
             $args = array(
-                'post_type'      => 'hoomans_post', // Replace with the slug of your custom post type
+                'post_type'      => 'custom_post', // Replace with the slug of your custom post type
                 'post_status'    => 'publish',
                 'posts_per_page' => 12, // Number of posts to display per page
                 'paged'          => $paged, // Current page number

@@ -371,7 +371,7 @@ function custom_post_type() {
         'menu_icon'           => 'dashicons-admin-post', // You can choose an icon from Dashicons or upload your own
     );
 
-    register_post_type( 'hoomans_post', $args );
+    register_post_type( 'custom_post', $args );
 }
 add_action( 'init', 'custom_post_type' );
 
@@ -426,7 +426,7 @@ add_action( 'wp_ajax_nopriv_filter_posts', 'filter_posts_ajax' );
 function filter_posts_ajax() {
     $country_ids = $_POST['country'];
     $args = array(
-        'post_type' => 'hoomans_post',
+        'post_type' => 'custom_post',
         'post_status' => 'publish',
         'posts_per_page' => 50,
         'tax_query' => array(
